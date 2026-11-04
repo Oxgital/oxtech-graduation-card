@@ -17,6 +17,10 @@
   2. Check the cohort name ("Wave One Cohort" appears twice: in the card caption and in the settings).
   3. Edit the course list in the settings at the bottom if needed.
 -->
+<style>
+/* standalone page: centre the card + form in the window on desktop */
+@media (min-width:901px){body{min-height:100vh;box-sizing:border-box;display:flex;align-items:center;justify-content:center}}
+</style>
 </head>
 <body style="margin:0;padding:32px 16px;background:#F5F5F5">
 
@@ -118,7 +122,7 @@
 
 <style>
 /* ============ PAGE LAYOUT ============ */
-.oxg{font-optical-sizing:auto;box-sizing:border-box;width:min(100%,1100px);padding:0 clamp(12px,2vw,24px);display:grid;gap:clamp(24px,4vw,48px);grid-template-columns:minmax(0,460px) minmax(0,520px);justify-content:center;align-items:start;margin:0 auto;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#111111}
+.oxg{font-optical-sizing:auto;box-sizing:border-box;width:min(100%,1100px);padding:0 clamp(12px,2vw,24px);display:grid;gap:clamp(24px,4vw,48px);grid-template-columns:minmax(0,460px) minmax(0,520px);justify-content:center;align-items:center;margin:0 auto;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#111111}
 .oxg-stage{position:relative;width:min(100%,460px);justify-self:center;aspect-ratio:1080/1350;overflow:hidden;border-radius:14px;box-shadow:0 20px 50px rgba(0,40,90,.18)}
 @media (max-width:900px){
 	.oxg{grid-template-columns:minmax(0,1fr);gap:28px}
