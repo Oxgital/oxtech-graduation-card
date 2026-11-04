@@ -101,7 +101,10 @@
 		<h2>Your graduation card</h2>
 		<p class="oxg-sub">Check your details, add a photo you love, then share it.</p>
 
-		<label>Name on card <input type="text" id="oxg-in-name" maxlength="40" autocomplete="name" placeholder="e.g. Ogbodo Oluebube"></label>
+		<div class="oxg-names">
+			<label>First name <input type="text" id="oxg-in-first" maxlength="20" autocomplete="given-name" placeholder="e.g. Oluebube"></label>
+			<label>Last name <input type="text" id="oxg-in-last" maxlength="20" autocomplete="family-name" placeholder="e.g. Ogbodo"></label>
+		</div>
 		<label id="oxg-course-wrap">Course <select id="oxg-in-course"></select></label>
 
 		<div class="oxg-field">
@@ -134,6 +137,7 @@
 	.oxg-form{gap:16px}
 	.oxg-form h2{font-size:24px}
 	.oxg-actions>button{flex:1 1 100%}
+	.oxg-names{grid-template-columns:1fr}
 }
 
 /* ============ CARD STYLES (1080 x 1350) ============ */
@@ -173,6 +177,7 @@
 .oxg-sub{margin:-10px 0 0;opacity:.7}
 .oxg-form label,.oxg-label{display:grid;gap:6px;font-size:14px;font-weight:600}
 .oxg-form input[type=text],.oxg-form select{padding:12px 14px;border:1px solid #CBD3E3;border-radius:10px;font:400 15px 'Bricolage Grotesque',sans-serif}
+.oxg-names{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .oxg-field{display:grid;gap:10px}
 .oxg-upload{position:relative;display:flex!important;align-items:center;justify-content:center;min-height:52px;border:2px dashed #92BDFC;border-radius:10px;background:#F4F8FF;color:#2A8EF8;cursor:pointer}
 .oxg-upload input[type=file]{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;opacity:0!important;display:block!important;cursor:pointer;z-index:2}
@@ -206,7 +211,8 @@
 	const $     = id => document.getElementById(id);
 	const card  = $('oxg-card'), stage = card.parentElement;
 	const box   = $('oxg-photo'), img = $('oxg-img');
-	const nameIn = $('oxg-in-name'), courseIn = $('oxg-in-course'), zoomIn = $('oxg-in-zoom');
+	const firstIn = $('oxg-in-first'), lastIn = $('oxg-in-last'), courseIn = $('oxg-in-course'), zoomIn = $('oxg-in-zoom');
+	const fullName = () => [firstIn.value, lastIn.value].map(v => v.trim()).filter(Boolean).join(' ');
 	const BOX = 516, TILT = 2.5 * Math.PI / 180;
 	let zoom = 1, offX = 0, offY = 0, scale = 1;
 
@@ -249,13 +255,13 @@
 	/* fill details */
 	cfg.courses.forEach(c => courseIn.add(new Option(c, c)));
 	function update() {
-		$('oxg-name').textContent = nameIn.value.trim() || cfg.name;
+		$('oxg-name').textContent = fullName() || cfg.name;
 		$('oxg-course').textContent = courseIn.value;
 		shrink($('oxg-name'), 960, 86);
 		shrink($('oxg-course'), 960, 36);
 		shrink(document.querySelector('.oxg-caption'), 480, 64);
 	}
-	nameIn.addEventListener('input', update);
+	[firstIn, lastIn].forEach(el => el.addEventListener('input', update));
 	courseIn.addEventListener('change', update);
 
 	/* photo: cover-fit, zoom, drag */
@@ -329,7 +335,7 @@
 
 	/* ---------- export HTML → PNG (with fallbacks) ---------- */
 	const status = $('oxg-status');
-	const fileName = () => (nameIn.value.trim().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '') || 'Oxtech') + '-Graduation-Card.png';
+	const fileName = () => (fullName().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '') || 'Oxtech') + '-Graduation-Card.png';
 	const caption = () => `I just completed the ${courseIn.value} programme at Oxtech Academy (${cfg.cohort})! 🎓 Grateful for the journey and excited for what's next. #OxtechAcademy #LearnTechWithOxtech`;
 	const toDataURL = blob => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(blob); });
 
