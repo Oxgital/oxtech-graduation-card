@@ -22,7 +22,7 @@
 
 <!-- ===================== START (paste from here into Elementor) ===================== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js" data-no-optimize="1" data-cfasync="false"></script>
 
 <div class="oxg" id="oxg">
@@ -77,7 +77,7 @@
 				</defs>
 				<path class="oxg-badge-edge" fill="#FFC93C" d=""/>
 				<circle r="88" fill="none" stroke="#111111" stroke-opacity="0.18" stroke-width="2"/>
-				<g class="oxg-badge-ring" font-family="Poppins, sans-serif" font-size="14" font-weight="700" fill="#111111" text-anchor="middle"></g>
+				<g class="oxg-badge-ring" font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="700" fill="#111111" text-anchor="middle"></g>
 				<circle r="42" fill="#111111"/>
 				<path d="M-17 1 L-5 13 L18 -11" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
@@ -118,7 +118,7 @@
 
 <style>
 /* ============ PAGE LAYOUT ============ */
-.oxg{box-sizing:border-box;width:min(100%,1100px);padding:0 clamp(12px,2vw,24px);display:grid;gap:clamp(24px,4vw,48px);grid-template-columns:minmax(0,460px) minmax(0,520px);justify-content:center;align-items:start;margin:0 auto;font-family:Poppins,system-ui,sans-serif;color:#111111}
+.oxg{font-optical-sizing:auto;box-sizing:border-box;width:min(100%,1100px);padding:0 clamp(12px,2vw,24px);display:grid;gap:clamp(24px,4vw,48px);grid-template-columns:minmax(0,460px) minmax(0,520px);justify-content:center;align-items:start;margin:0 auto;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#111111}
 .oxg-stage{position:relative;width:min(100%,460px);justify-self:center;aspect-ratio:1080/1350;overflow:hidden;border-radius:14px;box-shadow:0 20px 50px rgba(0,40,90,.18)}
 @media (max-width:900px){
 	.oxg{grid-template-columns:minmax(0,1fr);gap:28px}
@@ -133,42 +133,42 @@
 }
 
 /* ============ CARD STYLES (1080 x 1350) ============ */
-.oxg-card{position:absolute;left:0;top:0;width:1080px;height:1350px;overflow:hidden;transform-origin:0 0;transform:scale(var(--oxg-scale,.4));color:#fff;font-family:Poppins,sans-serif;background:#2A8EF8}
+.oxg-card{font-optical-sizing:auto;position:absolute;left:0;top:0;width:1080px;height:1350px;overflow:hidden;transform-origin:0 0;transform:scale(var(--oxg-scale,.4));color:#fff;font-family:'Bricolage Grotesque',sans-serif;background:#2A8EF8}
 .oxg-card *{box-sizing:border-box}
 .oxg [hidden]{display:none!important}
 .oxg-bg{position:absolute;left:0;top:0;width:1080px!important;height:1350px!important;max-width:none!important}
 
-.oxg-logo{position:absolute;left:405px;top:30px;width:270px;height:auto}
+.oxg-logo{position:absolute;left:420px;top:60px;width:240px;height:auto}
 .oxg-logo-text{display:flex;flex-direction:column;align-items:center;gap:2px}
 .oxg-logo-text span{font-size:46px;font-weight:400;letter-spacing:3px;line-height:1}
 .oxg-logo-text small{font-size:12px;font-weight:600;letter-spacing:15px;margin-right:-15px}
 
-.oxg-polaroid-back{position:absolute;left:225px;top:170px;width:630px;height:760px;background:#F1F4F9;transform:rotate(-5deg);box-shadow:0 20px 40px rgba(0,48,110,.3)}
-.oxg-polaroid{position:absolute;left:225px;top:160px;width:630px;height:760px;padding:36px 36px 0;background:#fff;transform:rotate(2.5deg);box-shadow:0 2px 4px rgba(0,48,110,.25),0 30px 60px rgba(0,48,110,.4);display:flex;flex-direction:column;align-items:center}
-.oxg-photo{position:relative;width:558px;height:558px;flex:0 0 auto;overflow:hidden;background:#D7DEEA;touch-action:none}
+.oxg-polaroid-back{position:absolute;left:250px;top:206px;width:580px;height:690px;background:#F1F4F9;transform:rotate(-5deg);box-shadow:0 20px 40px rgba(0,48,110,.3)}
+.oxg-polaroid{position:absolute;left:250px;top:196px;width:580px;height:690px;padding:32px 32px 0;background:#fff;transform:rotate(2.5deg);box-shadow:0 2px 4px rgba(0,48,110,.25),0 30px 60px rgba(0,48,110,.4);display:flex;flex-direction:column;align-items:center}
+.oxg-photo{position:relative;width:516px;height:516px;flex:0 0 auto;overflow:hidden;background:#D7DEEA;touch-action:none}
 .oxg-photo.has-photo{cursor:grab}
 .oxg-photo.has-photo:active{cursor:grabbing}
 .oxg-img{position:absolute;max-width:none!important;user-select:none;-webkit-user-drag:none;pointer-events:none}
 .oxg-empty{position:absolute;inset:0;background:#D7DEEA}
 .oxg-empty svg{display:block;width:100%;height:100%}
-.oxg-caption{margin-top:34px;font-family:Caveat,cursive;font-weight:700;font-size:70px;line-height:1;color:#111111;white-space:nowrap}
+.oxg-caption{flex:1;display:flex;align-items:center;padding-bottom:4px;font-family:Caveat,cursive;font-weight:700;font-size:64px;line-height:1;color:#111111;white-space:nowrap}
 
-.oxg-tape{position:absolute;left:440px;top:128px;width:200px;height:58px;background:rgba(255,201,60,.85);transform:rotate(-3deg);clip-path:polygon(0 8%,4% 0,8% 10%,12% 0,88% 0,92% 10%,96% 0,100% 8%,100% 92%,96% 100%,92% 90%,88% 100%,12% 100%,8% 90%,4% 100%,0 92%)}
+.oxg-tape{position:absolute;left:440px;top:166px;width:200px;height:58px;background:rgba(255,201,60,.85);transform:rotate(-3deg);clip-path:polygon(0 8%,4% 0,8% 10%,12% 0,88% 0,92% 10%,96% 0,100% 8%,100% 92%,96% 100%,92% 90%,88% 100%,12% 100%,8% 90%,4% 100%,0 92%)}
 
-.oxg-badge{position:absolute;left:750px;top:760px;width:260px;height:260px;transform:rotate(10deg);overflow:visible;filter:drop-shadow(0 12px 14px rgba(0,48,110,.35))}
+.oxg-badge{position:absolute;left:765px;top:565px;width:230px;height:230px;transform:rotate(10deg);overflow:visible;filter:drop-shadow(0 12px 14px rgba(0,48,110,.35))}
 
-.oxg-text{position:absolute;left:60px;right:60px;top:990px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.oxg-lead{font-size:30px;font-weight:300}
-.oxg-name{margin-top:10px;font-size:82px;font-weight:800;line-height:1;letter-spacing:-1px;text-transform:uppercase;white-space:nowrap}
-.oxg-course{margin-top:14px;font-size:36px;font-weight:700;color:#FFC93C;white-space:nowrap}
-.oxg-footer{position:absolute;left:0;right:0;bottom:48px;text-align:center;font-size:20px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#DCE8FF}
+.oxg-text{position:absolute;left:60px;right:60px;top:982px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.oxg-lead{font-size:30px;font-weight:400;color:#EAF3FF}
+.oxg-name{margin-top:10px;font-size:86px;font-weight:600;line-height:1.05;letter-spacing:-0.5px;text-transform:capitalize;white-space:nowrap}
+.oxg-course{margin-top:14px;font-size:36px;font-weight:600;color:#FFC93C;white-space:nowrap}
+.oxg-footer{position:absolute;left:0;right:0;bottom:56px;text-align:center;font-size:20px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#DCE8FF}
 
 /* ============ FORM ============ */
 .oxg-form{display:grid;width:100%;max-width:520px;gap:18px;align-self:center}
-.oxg-form h2{margin:0;font-size:28px;font-weight:700}
+.oxg-form h2{margin:0;font-size:30px;font-weight:600}
 .oxg-sub{margin:-10px 0 0;opacity:.7}
 .oxg-form label,.oxg-label{display:grid;gap:6px;font-size:14px;font-weight:600}
-.oxg-form input[type=text],.oxg-form select{padding:12px 14px;border:1px solid #CBD3E3;border-radius:10px;font:400 15px Poppins,sans-serif}
+.oxg-form input[type=text],.oxg-form select{padding:12px 14px;border:1px solid #CBD3E3;border-radius:10px;font:400 15px 'Bricolage Grotesque',sans-serif}
 .oxg-field{display:grid;gap:10px}
 .oxg-upload{position:relative;display:flex!important;align-items:center;justify-content:center;min-height:52px;border:2px dashed #92BDFC;border-radius:10px;background:#F4F8FF;color:#2A8EF8;cursor:pointer}
 .oxg-upload input[type=file]{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;opacity:0!important;display:block!important;cursor:pointer;z-index:2}
@@ -177,16 +177,16 @@
 .oxg-zoom input{accent-color:#2A8EF8}
 .oxg-hint,.oxg-status{margin:0;font-size:13px;opacity:.75;min-height:1.2em}
 .oxg-actions{display:flex;flex-wrap:wrap;gap:10px}
-.oxg-form button{padding:13px 20px;border-radius:10px;border:2px solid #2A8EF8;background:#fff;color:#2A8EF8;font:600 15px Poppins,sans-serif;cursor:pointer}
+.oxg-form button{padding:13px 20px;border-radius:10px;border:2px solid #2A8EF8;background:#fff;color:#2A8EF8;font:600 15px 'Bricolage Grotesque',sans-serif;cursor:pointer}
 .oxg-form button.oxg-primary{background:#2A8EF8;color:#fff}
 .oxg-form :focus-visible,.oxg-upload:focus-within{outline:3px solid #FFC93C;outline-offset:2px}
 .oxg-sheet{position:fixed;inset:0;z-index:99999;background:rgba(0,40,90,.7);display:flex;align-items:center;justify-content:center;padding:16px}
 .oxg-sheet[hidden]{display:none!important}
-.oxg-sheet-box{background:#fff;border-radius:16px;padding:18px;max-width:420px;width:100%;max-height:100%;overflow:auto;font-family:Poppins,sans-serif;color:#111111;text-align:center}
+.oxg-sheet-box{background:#fff;border-radius:16px;padding:18px;max-width:420px;width:100%;max-height:100%;overflow:auto;font-family:'Bricolage Grotesque',sans-serif;color:#111111;text-align:center}
 .oxg-sheet-box img{display:block;width:100%;height:auto;border-radius:10px}
 .oxg-sheet-box p{font-size:14px;margin:12px 0}
 .oxg-sheet-actions{display:flex;gap:10px;justify-content:center}
-.oxg-sheet-actions a,.oxg-sheet-actions button{padding:12px 20px;border-radius:10px;font:600 15px Poppins,sans-serif;cursor:pointer;text-decoration:none}
+.oxg-sheet-actions a,.oxg-sheet-actions button{padding:12px 20px;border-radius:10px;font:600 15px 'Bricolage Grotesque',sans-serif;cursor:pointer;text-decoration:none}
 .oxg-sheet-save{background:#2A8EF8;color:#fff!important}
 .oxg-sheet-close{background:#fff;color:#2A8EF8;border:2px solid #2A8EF8}
 </style>
@@ -203,7 +203,7 @@
 	const card  = $('oxg-card'), stage = card.parentElement;
 	const box   = $('oxg-photo'), img = $('oxg-img');
 	const nameIn = $('oxg-in-name'), courseIn = $('oxg-in-course'), zoomIn = $('oxg-in-zoom');
-	const BOX = 558, TILT = 2.5 * Math.PI / 180;
+	const BOX = 516, TILT = 2.5 * Math.PI / 180;
 	let zoom = 1, offX = 0, offY = 0, scale = 1;
 
 	/* background art: turn the inline SVG into a self-contained image so the PNG export keeps the gold foil */
@@ -225,7 +225,7 @@
 	/* badge ring text: one letter per element (reliable in every browser and in the PNG export) */
 	function ringText() {
 		const g = document.querySelector('.oxg-badge-ring'), txt = 'CERTIFIED GRADUATE • OXTECH ACADEMY •', R = 70;
-		const m = document.createElement('canvas').getContext('2d'); m.font = '700 14px Poppins, sans-serif';
+		const m = document.createElement('canvas').getContext('2d'); m.font = '700 14px "Bricolage Grotesque", sans-serif';
 		g.innerHTML = ''; let a = Math.PI;
 		for (const ch of txt) {
 			const step = (m.measureText(ch).width + 2.6) / R, mid = a + step / 2;
@@ -247,9 +247,9 @@
 	function update() {
 		$('oxg-name').textContent = nameIn.value.trim() || cfg.name;
 		$('oxg-course').textContent = courseIn.value;
-		shrink($('oxg-name'), 960, 82);
+		shrink($('oxg-name'), 960, 86);
 		shrink($('oxg-course'), 960, 36);
-		shrink(document.querySelector('.oxg-caption'), 560, 70);
+		shrink(document.querySelector('.oxg-caption'), 480, 64);
 	}
 	nameIn.addEventListener('input', update);
 	courseIn.addEventListener('change', update);
@@ -325,6 +325,7 @@
 
 	/* ---------- export HTML → PNG (with fallbacks) ---------- */
 	const status = $('oxg-status');
+	const fileName = () => (nameIn.value.trim().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '') || 'Oxtech') + '-Graduation-Card.png';
 	const caption = () => `I just completed the ${courseIn.value} programme at Oxtech Academy (${cfg.cohort})! 🎓 Grateful for the journey and excited for what's next. #OxtechAcademy #LearnTechWithOxtech`;
 	const toDataURL = blob => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(blob); });
 
@@ -353,7 +354,7 @@
 	async function getFontCSS() {
 		if (fontCSS !== null) return fontCSS;
 		try {
-			let css = await (await fetch('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&family=Caveat:wght@700&display=swap')).text();
+			let css = await (await fetch('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@700&display=swap')).text();
 			const urls = [...new Set(css.match(/https:[^)]+\.woff2/g) || [])];
 			await Promise.all(urls.map(async u => { css = css.split(u).join(await toDataURL(await (await fetch(u)).blob())); }));
 			fontCSS = css;
@@ -395,12 +396,12 @@
 		return blob;
 	}
 	function showSheet(url) {
-		sheet.querySelector('img').src = url; sheet.querySelector('.oxg-sheet-save').href = url; sheet.hidden = false;
+		sheet.querySelector('img').src = url; const save = sheet.querySelector('.oxg-sheet-save'); save.href = url; save.download = fileName(); sheet.hidden = false;
 	}
 	async function download() {
 		try {
 			await makeCard();
-			const a = document.createElement('a'); a.href = lastURL; a.download = 'oxtech-graduation-card.png';
+			const a = document.createElement('a'); a.href = lastURL; a.download = fileName();
 			document.body.appendChild(a); a.click(); a.remove();
 			const inApp = /FBAN|FBAV|Instagram|WhatsApp|Line\/|Snapchat|TikTok|iPhone|iPad/i.test(navigator.userAgent);
 			if (inApp) showSheet(lastURL);
@@ -414,7 +415,7 @@
 	$('oxg-share').addEventListener('click', async () => {
 		try {
 			const blob = await makeCard();
-			const file = new File([blob], 'oxtech-graduation-card.png', { type: 'image/png' });
+			const file = new File([blob], fileName(), { type: 'image/png' });
 			if (navigator.canShare && navigator.canShare({ files: [file] })) {
 				status.textContent = '';
 				await navigator.share({ files: [file], text: caption() }).catch(() => {});
